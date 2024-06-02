@@ -15,62 +15,37 @@ html {
 
 body {
   font-family: "Roboto", serif;
-  /*Titre de Fonctionnement et restaurant */
 }
 body .main-container {
   margin: auto;
   max-width: 1440px;
+  /*Titre de Fonctionnement et restaurant */
+  /*********************************************************/
+  /*********************************************************/
+  /****search*****/
+  /*****functionality***/
 }
-body a {
+body .main-container a {
   color: inherit;
   text-decoration: none;
 }
-body .title {
+body .main-container .title {
   margin-left: 20px;
 }
 @media only screen and (min-width: 1024px) {
-  body .title {
+  body .main-container .title {
     margin-left: 14%;
   }
 }
-body .title1 {
+body .main-container .title1 {
   margin-left: 20px;
 }
 @media only screen and (min-width: 1024px) {
-  body .title1 {
+  body .main-container .title1 {
     margin-left: 206px;
   }
 }
-body .background {
-  background-color: transparent; /* Fond transparent */
-  animation-name: showBackground; /* Nom de l'animation */
-  animation-duration: 10s; /* Durée de l'animation */
-  animation-fill-mode: forwards; /* Maintenir les styles de la fin de l'animation */
-  width: 100%; /* Couvrir toute la largeur du viewport */
-  height: 100%; /* Couvrir toute la hauteur du viewport */
-  position: fixed;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 9999;
-  /*********************************************************/
-  /****search*****/
-  /*****functionality***/
-  /*********************************************************/
-  /****search*****/
-  /*****functionality***/
-}
-@keyframes showBackground {
-  0% {
-    background-color: black; /* Début de l'animation avec un fond transparent */
-    scale: 1;
-  }
-  100% {
-    background-color: transparent; /* Fin de l'animation avec un fond noir */
-    scale: 0;
-  }
-}
-body .background .background {
+body .main-container .background {
   background-color: transparent; /* Fond transparent */
   animation-name: showBackground; /* Nom de l'animation */
   animation-duration: 10s; /* Durée de l'animation */
@@ -93,164 +68,7 @@ body .background .background {
     scale: 0;
   }
 }
-body .background .background .loader {
-  width: 48px;
-  height: 48px;
-  border: 5px solid #FFF;
-  border-bottom-color: #FF3D00;
-  border-radius: 50%;
-  display: inline-block;
-  box-sizing: border-box;
-  animation: rotation 2s linear infinite;
-  animation-delay: 2s;
-}
-@keyframes rotation {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-body .background .search__bar {
-  display: flex;
-  flex-direction: column;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  padding-bottom: 35px;
-  gap: 35px;
-  background-color: rgb(246, 246, 246);
-  align-items: center;
-  justify-content: center;
-}
-body .background .search__bar .search__bar--input {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  background-color: rgb(234, 234, 234);
-  border-top: 2px rgb(234, 234, 234); /* Bordure en haut */
-  border-bottom: 2px rgb(234, 234, 234);
-  box-shadow: 0px 4px 8px rgb(0, 0, 0); /* Ombre avec un léger flou */
-  height: 50px;
-  width: 100%;
-}
-body .background .search__bar .search__bar--input .fa-location-dot {
-  margin-right: 20px;
-}
-body .background .search__bar .search__bar--input input::placeholder {
-  font-weight: bold;
-}
-body .background .search__bar .search__bar--input input {
-  border: none; /* Désactive la bordure */
-  background-color: initial;
-}
-body .background .search__bar .search__introduction {
-  display: flex;
-  flex-direction: column;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
-}
-body .background .search__bar .search__introduction .search__title {
-  margin-left: 20px;
-  margin-right: 20px;
-  display: flex;
-  flex-direction: column;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  gap: 20px;
-}
-body .background .search__bar .search__introduction p {
-  margin-left: 20px;
-  margin-right: 20px;
-  text-align: center;
-}
-body .background .search__bar .search__explore {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  width: 218px;
-  height: 50px;
-  color: white;
-  background-image: linear-gradient(to left, rgb(147, 86, 220), rgb(255, 121, 218));
-  border-radius: 20px;
-  cursor: pointer; /* Curseur pointer */
-  transition: background-color 0.5s; /* Transition en douceur */
-  font-size: 16px;
-}
-body .background .search__bar input[type=button] {
-  background-image: linear-gradient(to left, rgba(147, 86, 220, 0.8), rgba(255, 121, 218, 0.8));
-}
-body .background .search__bar .search__explore:hover {
-  filter: brightness(1.1); /* Éclaircir le bouton */
-  transform: scale(1); /* Optionnel: agrandir légèrement le bouton pour un effet plus dynamique */
-}
-body .background .functionality {
-  display: flex;
-  flex-direction: column;
-  display: flex;
-  flex-direction: column;
-  gap: 35px;
-  margin-top: 20px;
-}
-body .background .functionality .functionality__links {
-  display: flex;
-  flex-direction: column;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-}
-@media only screen and (min-width: 1024px) {
-  body .background .functionality .functionality__links {
-    flex-direction: row;
-  }
-}
-body .background .functionality .functionality__links .functionality__links--card {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  border-radius: 20px;
-  background-color: rgb(246, 246, 246);
-  width: 322px;
-  height: 73px;
-  box-shadow: 0px 4px 15px 0px rgb(0, 0, 0);
-}
-body .background .functionality .functionality__links .functionality__links--card .numbered-icon {
-  min-width: 24px;
-  height: 24px;
-  border: 1px solid rgb(217, 217, 217);
-  border-radius: 50%;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  background-color: rgb(147, 86, 220);
-  position: absolute;
-  font-family: "Roboto";
-  transform: translateX(-160px);
-}
-body .background .functionality .functionality__links .functionality__links--card .fa-mobile-screen-button, body .background .functionality .functionality__links .functionality__links--card .fa-list {
-  color: rgb(126, 126, 126);
-  margin-right: 20px;
-}
-body .background .functionality .functionality__links .functionality__links--card .fa-store {
-  color: rgb(147, 86, 220);
-  margin-right: 20px;
-}
-body .background .functionality .loader {
+body .main-container .loader {
   width: 48px;
   height: 48px;
   border: 5px solid #fff;
@@ -269,7 +87,7 @@ body .background .functionality .loader {
     transform: rotate(360deg);
   }
 }
-body .background .search__bar {
+body .main-container .search__bar {
   display: flex;
   flex-direction: column;
   display: flex;
@@ -281,7 +99,7 @@ body .background .search__bar {
   align-items: center;
   justify-content: center;
 }
-body .background .search__bar .search__bar--input {
+body .main-container .search__bar .search__bar--input {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -293,17 +111,17 @@ body .background .search__bar .search__bar--input {
   height: 50px;
   width: 100%;
 }
-body .background .search__bar .search__bar--input .fa-location-dot {
+body .main-container .search__bar .search__bar--input .fa-location-dot {
   margin-right: 20px;
 }
-body .background .search__bar .search__bar--input input::placeholder {
+body .main-container .search__bar .search__bar--input input::placeholder {
   font-weight: bold;
 }
-body .background .search__bar .search__bar--input input {
+body .main-container .search__bar .search__bar--input input {
   border: none; /* Désactive la bordure */
   background-color: initial;
 }
-body .background .search__bar .search__introduction {
+body .main-container .search__bar .search__introduction {
   display: flex;
   flex-direction: column;
   display: flex;
@@ -313,7 +131,7 @@ body .background .search__bar .search__introduction {
   justify-content: center;
   gap: 20px;
 }
-body .background .search__bar .search__introduction .search__title {
+body .main-container .search__bar .search__introduction .search__title {
   margin-left: 20px;
   margin-right: 20px;
   display: flex;
@@ -325,12 +143,12 @@ body .background .search__bar .search__introduction .search__title {
   text-align: center;
   gap: 20px;
 }
-body .background .search__bar .search__introduction p {
+body .main-container .search__bar .search__introduction p {
   margin-left: 20px;
   margin-right: 20px;
   text-align: center;
 }
-body .background .search__bar .search__explore {
+body .main-container .search__bar .search__explore {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -344,14 +162,14 @@ body .background .search__bar .search__explore {
   transition: background-color 0.5s; /* Transition en douceur */
   font-size: 16px;
 }
-body .background .search__bar input[type=button] {
+body .main-container .search__bar input[type=button] {
   background-image: linear-gradient(to left, rgba(147, 86, 220, 0.8), rgba(255, 121, 218, 0.8));
 }
-body .background .search__bar .search__explore:hover {
+body .main-container .search__bar .search__explore:hover {
   filter: brightness(1.1); /* Éclaircir le bouton */
   transform: scale(1); /* Optionnel: agrandir légèrement le bouton pour un effet plus dynamique */
 }
-body .background .functionality {
+body .main-container .functionality {
   display: flex;
   flex-direction: column;
   display: flex;
@@ -359,7 +177,7 @@ body .background .functionality {
   gap: 35px;
   margin-top: 20px;
 }
-body .background .functionality .functionality__links {
+body .main-container .functionality .functionality__links {
   display: flex;
   flex-direction: column;
   display: flex;
@@ -369,11 +187,11 @@ body .background .functionality .functionality__links {
   gap: 20px;
 }
 @media only screen and (min-width: 1024px) {
-  body .background .functionality .functionality__links {
+  body .main-container .functionality .functionality__links {
     flex-direction: row;
   }
 }
-body .background .functionality .functionality__links .functionality__links--card {
+body .main-container .functionality .functionality__links .functionality__links--card {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -384,7 +202,7 @@ body .background .functionality .functionality__links .functionality__links--car
   height: 73px;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
 }
-body .background .functionality .functionality__links .numbered-icon {
+body .main-container .functionality .functionality__links .numbered-icon {
   min-width: 24px;
   height: 24px;
   border: 1px solid rgb(217, 217, 217);
@@ -399,12 +217,12 @@ body .background .functionality .functionality__links .numbered-icon {
   font-family: "Roboto";
   transform: translateX(-160px);
 }
-body .background .functionality .functionality__links .fa-mobile-screen-button,
-body .background .functionality .functionality__links .fa-list {
+body .main-container .functionality .functionality__links .fa-mobile-screen-button,
+body .main-container .functionality .functionality__links .fa-list {
   color: rgb(126, 126, 126);
   margin-right: 20px;
 }
-body .background .functionality .functionality__links .fa-store {
+body .main-container .functionality .functionality__links .fa-store {
   color: rgb(147, 86, 220);
   margin-right: 20px;
 }
