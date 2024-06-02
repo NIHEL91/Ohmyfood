@@ -2,7 +2,7 @@ Ce projet est un site Web  de plusieurs restaurants, mettant en vedette une vari
 
 1) Installation
 Clonez ce dépôt sur votre machine locale en utilisant la commande suivante :
-git clone [https://https://github.com/NIHEL91/Ohmyfood
+git clone https://https://github.com/NIHEL91/Ohmyfood
 
 2) Naviguez dans le répertoire du projet :
 cd myfood
