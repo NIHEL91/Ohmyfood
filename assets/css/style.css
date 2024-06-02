@@ -15,37 +15,36 @@ html {
 
 body {
   font-family: "Roboto", serif;
-}
-body .main-container {
-  margin: auto;
-  max-width: 1440px;
   /*Titre de Fonctionnement et restaurant */
-  /*********************************************************/
   /*********************************************************/
   /****search*****/
   /*****functionality***/
 }
-body .main-container a {
+body .main-container {
+  margin: auto;
+  max-width: 1440px;
+}
+body a {
   color: inherit;
   text-decoration: none;
 }
-body .main-container .title {
+body .title {
   margin-left: 20px;
 }
 @media only screen and (min-width: 1024px) {
-  body .main-container .title {
+  body .title {
     margin-left: 14%;
   }
 }
-body .main-container .title1 {
+body .title1 {
   margin-left: 20px;
 }
 @media only screen and (min-width: 1024px) {
-  body .main-container .title1 {
+  body .title1 {
     margin-left: 206px;
   }
 }
-body .main-container .background {
+body .background {
   background-color: transparent; /* Fond transparent */
   animation-name: showBackground; /* Nom de l'animation */
   animation-duration: 10s; /* Durée de l'animation */
@@ -57,18 +56,19 @@ body .main-container .background {
   justify-content: center;
   align-items: center;
   z-index: 9999;
+  /*********************************************************/
 }
 @keyframes showBackground {
   0% {
     background-color: black; /* Début de l'animation avec un fond transparent */
-    scale: 1;
+    transform: scale(1);
   }
   100% {
     background-color: transparent; /* Fin de l'animation avec un fond noir */
-    scale: 0;
+    transform: scale(0);
   }
 }
-body .main-container .loader {
+body .background .loader {
   width: 48px;
   height: 48px;
   border: 5px solid #fff;
@@ -87,7 +87,7 @@ body .main-container .loader {
     transform: rotate(360deg);
   }
 }
-body .main-container .search__bar {
+body .search__bar {
   display: flex;
   flex-direction: column;
   display: flex;
@@ -99,7 +99,7 @@ body .main-container .search__bar {
   align-items: center;
   justify-content: center;
 }
-body .main-container .search__bar .search__bar--input {
+body .search__bar .search__bar--input {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -112,21 +112,21 @@ body .main-container .search__bar .search__bar--input {
   width: 100%;
 }
 @media only screen and (min-width: 1024px) {
-  body .main-container .search__bar .search__bar--input {
+  body .search__bar .search__bar--input {
     box-shadow: none;
   }
 }
-body .main-container .search__bar .search__bar--input .fa-location-dot {
+body .search__bar .search__bar--input .fa-location-dot {
   margin-right: 20px;
 }
-body .main-container .search__bar .search__bar--input input::placeholder {
+body .search__bar .search__bar--input input::placeholder {
   font-weight: bold;
 }
-body .main-container .search__bar .search__bar--input input {
+body .search__bar .search__bar--input input {
   border: none; /* Désactive la bordure */
   background-color: initial;
 }
-body .main-container .search__bar .search__introduction {
+body .search__bar .search__introduction {
   display: flex;
   flex-direction: column;
   display: flex;
@@ -136,7 +136,7 @@ body .main-container .search__bar .search__introduction {
   justify-content: center;
   gap: 20px;
 }
-body .main-container .search__bar .search__introduction .search__title {
+body .search__bar .search__introduction .search__title {
   margin-left: 20px;
   margin-right: 20px;
   display: flex;
@@ -148,12 +148,12 @@ body .main-container .search__bar .search__introduction .search__title {
   text-align: center;
   gap: 20px;
 }
-body .main-container .search__bar .search__introduction p {
+body .search__bar .search__introduction p {
   margin-left: 20px;
   margin-right: 20px;
   text-align: center;
 }
-body .main-container .search__bar .search__explore {
+body .search__bar .search__explore {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -162,19 +162,21 @@ body .main-container .search__bar .search__explore {
   height: 50px;
   color: white;
   background-image: linear-gradient(to left, rgb(147, 86, 220), rgb(255, 121, 218));
-  border-radius: 20px;
+  border-radius: 25px;
   cursor: pointer; /* Curseur pointer */
   transition: background-color 0.5s; /* Transition en douceur */
   font-size: 16px;
+  border: 0;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
 }
-body .main-container .search__bar input[type=button] {
+body .search__bar input[type=button] {
   background-image: linear-gradient(to left, rgba(147, 86, 220, 0.8), rgba(255, 121, 218, 0.8));
 }
-body .main-container .search__bar .search__explore:hover {
+body .search__bar .search__explore:hover {
   filter: brightness(1.1); /* Éclaircir le bouton */
   transform: scale(1); /* Optionnel: agrandir légèrement le bouton pour un effet plus dynamique */
 }
-body .main-container .functionality {
+body .functionality {
   display: flex;
   flex-direction: column;
   display: flex;
@@ -182,7 +184,7 @@ body .main-container .functionality {
   gap: 35px;
   margin-top: 20px;
 }
-body .main-container .functionality .functionality__links {
+body .functionality .functionality__links {
   display: flex;
   flex-direction: column;
   display: flex;
@@ -192,11 +194,11 @@ body .main-container .functionality .functionality__links {
   gap: 20px;
 }
 @media only screen and (min-width: 1024px) {
-  body .main-container .functionality .functionality__links {
+  body .functionality .functionality__links {
     flex-direction: row;
   }
 }
-body .main-container .functionality .functionality__links .functionality__links--card {
+body .functionality .functionality__links .functionality__links--card {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -207,7 +209,7 @@ body .main-container .functionality .functionality__links .functionality__links-
   height: 73px;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
 }
-body .main-container .functionality .functionality__links .numbered-icon {
+body .functionality .functionality__links .numbered-icon {
   min-width: 24px;
   height: 24px;
   border: 1px solid rgb(217, 217, 217);
@@ -222,12 +224,12 @@ body .main-container .functionality .functionality__links .numbered-icon {
   font-family: "Roboto";
   transform: translateX(-160px);
 }
-body .main-container .functionality .functionality__links .fa-mobile-screen-button,
-body .main-container .functionality .functionality__links .fa-list {
+body .functionality .functionality__links .fa-mobile-screen-button,
+body .functionality .functionality__links .fa-list {
   color: rgb(126, 126, 126);
   margin-right: 20px;
 }
-body .main-container .functionality .functionality__links .fa-store {
+body .functionality .functionality__links .fa-store {
   color: rgb(147, 86, 220);
   margin-right: 20px;
 }
@@ -342,6 +344,11 @@ body .main-container .functionality .functionality__links .fa-store {
   height: 200px;
   width: 100%;
   border-radius: 15px 15px 0 0;
+}
+@media only screen and (min-width: 1024px) {
+  .restaurants .restaurant__cards .card .card__image {
+    object-fit: cover;
+  }
 }
 .restaurants .restaurant__cards .card .card__news {
   border-radius: 2px;
@@ -554,7 +561,7 @@ body .main-container .functionality .functionality__links .fa-store {
   animation-fill-mode: forwards;
   background-color: white;
   border-radius: 15px;
-  box-shadow: 0 4px 15px 0;
+  box-shadow: 0px 4.01px 15.04px 0px rgba(0, 0, 0, 0.1);
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -635,7 +642,9 @@ body .main-container .functionality .functionality__links .fa-store {
   height: 50px;
   color: white;
   background-image: linear-gradient(to left, rgb(147, 86, 220), rgb(255, 121, 218));
-  border-radius: 20px;
+  border-radius: 25px;
+  border: 0;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
   transition: background-color 0.5s;
   font-size: 16px;
 }

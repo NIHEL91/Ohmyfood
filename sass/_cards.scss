@@ -29,6 +29,10 @@
         height: 200px;
         width: 100%;
         border-radius: 15px 15px 0 0;
+        @media only screen and (min-width: 1024px) {
+          object-fit: cover;
+        }
+
       }
 
       .card__news {

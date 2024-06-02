@@ -17,10 +17,9 @@ body {
 
   .main-container {
     margin: auto;
-
     max-width: 1440px;
   
-
+  }
   a {
     color: inherit;
     text-decoration: none;
@@ -54,15 +53,17 @@ body {
     @keyframes showBackground {
       0% {
         background-color: black; /* Début de l'animation avec un fond transparent */
-        scale: 1;
+        transform: scale(1);
+
       }
 
       100% {
         background-color: transparent; /* Fin de l'animation avec un fond noir */
-        scale: 0;
+        transform: scale(0);
+
       }
     }
-  }
+  
   /*********************************************************/
 
   .loader {
@@ -84,7 +85,7 @@ body {
       }
     }
   }
-
+  }
   /*********************************************************/
 
   /****search*****/
@@ -155,10 +156,12 @@ body {
         rgba(147, 86, 220, 1),
         rgba(255, 121, 218, 1)
       );
-      border-radius: 20px;
+      border-radius: 25px;
       cursor: pointer; /* Curseur pointer */
       transition: background-color 0.5s; /* Transition en douceur */
       font-size: 16px;
+      border:0;
+      box-shadow:0px 4px  10px 0px rgba(0, 0, 0, 0.25) ;
     }
     input[type="button"] {
       background-image: linear-gradient(
@@ -224,5 +227,4 @@ body {
       }
     }
   }
-}
 }
