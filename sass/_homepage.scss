@@ -53,12 +53,12 @@ body {
     z-index: 9999;
     @keyframes showBackground {
       0% {
-        background-color: black; /* Début de l'animation avec un fond noir */
+        background-color: black; /* Début de l'animation avec un fond transparent */
         scale: 1;
       }
 
       100% {
-        background-color: transparent; /* Fin de l'animation avec un transparent */
+        background-color: transparent; /* Fin de l'animation avec un fond noir */
         scale: 0;
       }
     }
@@ -134,12 +134,9 @@ body {
                 background-color: rgba(234, 234, 234, 1);
                 border-top: 2px rgba(234, 234, 234, 1); /* Bordure en haut */
                 border-bottom: 2px rgba(234, 234, 234, 1);
-                box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25); /* Ombre avec un léger flou */
+                box-shadow: 0px 4px 8px rgba(0, 0, 0, 25); /* Ombre avec un léger flou */
                 height: 50px;
                 width: 100%;
-                @media only screen and (min-width: 1024px) {
-                  box-shadow:inset;
-                
 
                     .fa-location-dot {
                         margin-right: 20px;
@@ -297,7 +294,7 @@ body {
       background-color: rgba(234, 234, 234, 1);
       border-top: 2px rgba(234, 234, 234, 1); /* Bordure en haut */
       border-bottom: 2px rgba(234, 234, 234, 1);
-      box-shadow: 0px 4px 8px rgba(0, 0, 0, 25); /* Ombre avec un léger flou */
+      box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25); /* Ombre avec un léger flou */
       height: 50px;
       width: 100%;
 
@@ -389,7 +386,9 @@ body {
         background-color: $backroungd-cards;
         width: 322px;
         height: 73px;
-        box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 15);
+        box-shadow:  0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+      }
+
 
         .numbered-icon {
           min-width: 24px;
@@ -416,5 +415,4 @@ body {
       }
     }
   }
-}
 }

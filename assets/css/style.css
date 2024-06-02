@@ -1,18 +1,839 @@
-/* Error: expected "}".
- *     ,
- * 420 | }
- *     |  ^
- *     '
- *   sass\_homepage.scss 420:2  @import
- *   sass\main.scss 4:9         root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: 'Error: expected "}".\a     \2577 \a 420 \2502  }\a     \2502   ^\a     \2575 \a   sass\\_homepage.scss 420:2  @import\a   sass\\main.scss 4:9         root stylesheet';
+@charset "UTF-8";
+/* Réinitialisation des marges et des rembourrages pour tous les éléments */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
 }
+
+html {
+  /* Utilisation de box-sizing: inherit pour hériter du modèle de boîte défini par l'élément parent */
+  box-sizing: border-box; /* Assure que la largeur et la hauteur incluent le padding et la bordure */
+}
+
+body {
+  font-family: "Roboto", serif;
+  /*Titre de Fonctionnement et restaurant */
+}
+body .main-container {
+  margin: auto;
+  max-width: 1440px;
+}
+body a {
+  color: inherit;
+  text-decoration: none;
+}
+body .title {
+  margin-left: 20px;
+}
+@media only screen and (min-width: 1024px) {
+  body .title {
+    margin-left: 14%;
+  }
+}
+body .title1 {
+  margin-left: 20px;
+}
+@media only screen and (min-width: 1024px) {
+  body .title1 {
+    margin-left: 206px;
+  }
+}
+body .background {
+  background-color: transparent; /* Fond transparent */
+  animation-name: showBackground; /* Nom de l'animation */
+  animation-duration: 10s; /* Durée de l'animation */
+  animation-fill-mode: forwards; /* Maintenir les styles de la fin de l'animation */
+  width: 100%; /* Couvrir toute la largeur du viewport */
+  height: 100%; /* Couvrir toute la hauteur du viewport */
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  /*********************************************************/
+  /****search*****/
+  /*****functionality***/
+  /*********************************************************/
+  /****search*****/
+  /*****functionality***/
+}
+@keyframes showBackground {
+  0% {
+    background-color: black; /* Début de l'animation avec un fond transparent */
+    scale: 1;
+  }
+  100% {
+    background-color: transparent; /* Fin de l'animation avec un fond noir */
+    scale: 0;
+  }
+}
+body .background .background {
+  background-color: transparent; /* Fond transparent */
+  animation-name: showBackground; /* Nom de l'animation */
+  animation-duration: 10s; /* Durée de l'animation */
+  animation-fill-mode: forwards; /* Maintenir les styles de la fin de l'animation */
+  width: 100%; /* Couvrir toute la largeur du viewport */
+  height: 100%; /* Couvrir toute la hauteur du viewport */
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+@keyframes showBackground {
+  0% {
+    background-color: black; /* Début de l'animation avec un fond transparent */
+    scale: 1;
+  }
+  100% {
+    background-color: transparent; /* Fin de l'animation avec un fond noir */
+    scale: 0;
+  }
+}
+body .background .background .loader {
+  width: 48px;
+  height: 48px;
+  border: 5px solid #FFF;
+  border-bottom-color: #FF3D00;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 2s linear infinite;
+  animation-delay: 2s;
+}
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+body .background .search__bar {
+  display: flex;
+  flex-direction: column;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding-bottom: 35px;
+  gap: 35px;
+  background-color: rgb(246, 246, 246);
+  align-items: center;
+  justify-content: center;
+}
+body .background .search__bar .search__bar--input {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(234, 234, 234);
+  border-top: 2px rgb(234, 234, 234); /* Bordure en haut */
+  border-bottom: 2px rgb(234, 234, 234);
+  box-shadow: 0px 4px 8px rgb(0, 0, 0); /* Ombre avec un léger flou */
+  height: 50px;
+  width: 100%;
+}
+body .background .search__bar .search__bar--input .fa-location-dot {
+  margin-right: 20px;
+}
+body .background .search__bar .search__bar--input input::placeholder {
+  font-weight: bold;
+}
+body .background .search__bar .search__bar--input input {
+  border: none; /* Désactive la bordure */
+  background-color: initial;
+}
+body .background .search__bar .search__introduction {
+  display: flex;
+  flex-direction: column;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+body .background .search__bar .search__introduction .search__title {
+  margin-left: 20px;
+  margin-right: 20px;
+  display: flex;
+  flex-direction: column;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 20px;
+}
+body .background .search__bar .search__introduction p {
+  margin-left: 20px;
+  margin-right: 20px;
+  text-align: center;
+}
+body .background .search__bar .search__explore {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 218px;
+  height: 50px;
+  color: white;
+  background-image: linear-gradient(to left, rgb(147, 86, 220), rgb(255, 121, 218));
+  border-radius: 20px;
+  cursor: pointer; /* Curseur pointer */
+  transition: background-color 0.5s; /* Transition en douceur */
+  font-size: 16px;
+}
+body .background .search__bar input[type=button] {
+  background-image: linear-gradient(to left, rgba(147, 86, 220, 0.8), rgba(255, 121, 218, 0.8));
+}
+body .background .search__bar .search__explore:hover {
+  filter: brightness(1.1); /* Éclaircir le bouton */
+  transform: scale(1); /* Optionnel: agrandir légèrement le bouton pour un effet plus dynamique */
+}
+body .background .functionality {
+  display: flex;
+  flex-direction: column;
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+  margin-top: 20px;
+}
+body .background .functionality .functionality__links {
+  display: flex;
+  flex-direction: column;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+@media only screen and (min-width: 1024px) {
+  body .background .functionality .functionality__links {
+    flex-direction: row;
+  }
+}
+body .background .functionality .functionality__links .functionality__links--card {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  background-color: rgb(246, 246, 246);
+  width: 322px;
+  height: 73px;
+  box-shadow: 0px 4px 15px 0px rgb(0, 0, 0);
+}
+body .background .functionality .functionality__links .functionality__links--card .numbered-icon {
+  min-width: 24px;
+  height: 24px;
+  border: 1px solid rgb(217, 217, 217);
+  border-radius: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-color: rgb(147, 86, 220);
+  position: absolute;
+  font-family: "Roboto";
+  transform: translateX(-160px);
+}
+body .background .functionality .functionality__links .functionality__links--card .fa-mobile-screen-button, body .background .functionality .functionality__links .functionality__links--card .fa-list {
+  color: rgb(126, 126, 126);
+  margin-right: 20px;
+}
+body .background .functionality .functionality__links .functionality__links--card .fa-store {
+  color: rgb(147, 86, 220);
+  margin-right: 20px;
+}
+body .background .functionality .loader {
+  width: 48px;
+  height: 48px;
+  border: 5px solid #fff;
+  border-bottom-color: #ff3d00;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 2s linear infinite;
+  animation-delay: 2s;
+}
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+body .background .search__bar {
+  display: flex;
+  flex-direction: column;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding-bottom: 35px;
+  gap: 35px;
+  background-color: rgb(246, 246, 246);
+  align-items: center;
+  justify-content: center;
+}
+body .background .search__bar .search__bar--input {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(234, 234, 234);
+  border-top: 2px rgb(234, 234, 234); /* Bordure en haut */
+  border-bottom: 2px rgb(234, 234, 234);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25); /* Ombre avec un léger flou */
+  height: 50px;
+  width: 100%;
+}
+body .background .search__bar .search__bar--input .fa-location-dot {
+  margin-right: 20px;
+}
+body .background .search__bar .search__bar--input input::placeholder {
+  font-weight: bold;
+}
+body .background .search__bar .search__bar--input input {
+  border: none; /* Désactive la bordure */
+  background-color: initial;
+}
+body .background .search__bar .search__introduction {
+  display: flex;
+  flex-direction: column;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+body .background .search__bar .search__introduction .search__title {
+  margin-left: 20px;
+  margin-right: 20px;
+  display: flex;
+  flex-direction: column;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 20px;
+}
+body .background .search__bar .search__introduction p {
+  margin-left: 20px;
+  margin-right: 20px;
+  text-align: center;
+}
+body .background .search__bar .search__explore {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 218px;
+  height: 50px;
+  color: white;
+  background-image: linear-gradient(to left, rgb(147, 86, 220), rgb(255, 121, 218));
+  border-radius: 20px;
+  cursor: pointer; /* Curseur pointer */
+  transition: background-color 0.5s; /* Transition en douceur */
+  font-size: 16px;
+}
+body .background .search__bar input[type=button] {
+  background-image: linear-gradient(to left, rgba(147, 86, 220, 0.8), rgba(255, 121, 218, 0.8));
+}
+body .background .search__bar .search__explore:hover {
+  filter: brightness(1.1); /* Éclaircir le bouton */
+  transform: scale(1); /* Optionnel: agrandir légèrement le bouton pour un effet plus dynamique */
+}
+body .background .functionality {
+  display: flex;
+  flex-direction: column;
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+  margin-top: 20px;
+}
+body .background .functionality .functionality__links {
+  display: flex;
+  flex-direction: column;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+@media only screen and (min-width: 1024px) {
+  body .background .functionality .functionality__links {
+    flex-direction: row;
+  }
+}
+body .background .functionality .functionality__links .functionality__links--card {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  background-color: rgb(246, 246, 246);
+  width: 322px;
+  height: 73px;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
+}
+body .background .functionality .functionality__links .numbered-icon {
+  min-width: 24px;
+  height: 24px;
+  border: 1px solid rgb(217, 217, 217);
+  border-radius: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-color: rgb(147, 86, 220);
+  position: absolute;
+  font-family: "Roboto";
+  transform: translateX(-160px);
+}
+body .background .functionality .functionality__links .fa-mobile-screen-button,
+body .background .functionality .functionality__links .fa-list {
+  color: rgb(126, 126, 126);
+  margin-right: 20px;
+}
+body .background .functionality .functionality__links .fa-store {
+  color: rgb(147, 86, 220);
+  margin-right: 20px;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 35px;
+}
+.header .header {
+  display: flex;
+  flex-direction: column;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 35px;
+}
+.header .header .header__logo {
+  width: 162px; /* la largeur */
+  height: 44px;
+  margin: 15px;
+}
+.header .header__logo {
+  width: 162px; /* la largeur */
+  height: 44px;
+  margin: 15px;
+}
+
+.footer {
+  background-color: rgb(53, 53, 53);
+}
+.footer .footer__part {
+  padding-top: 16px;
+  padding-left: 16px;
+  font-family: "shrikhand";
+  font-style: italic;
+  font-size: 18px;
+  color: white;
+}
+.footer .footer__txt {
+  display: flex;
+  flex-direction: column;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-top: 10px;
+  margin-left: 16px;
+  color: white;
+  padding-bottom: 16px;
+}
+.footer .footer__txt .footer__txt {
+  display: flex;
+  flex-direction: column;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-top: 10px;
+  margin-left: 16px;
+  color: white;
+  padding-bottom: 16px;
+}
+.footer .footer__txt .footer__txt .footer__txt--link {
+  display: flex;
+}
+.footer .footer__txt .footer__txt .footer__txt--link .fa-solid {
+  margin-right: 10px;
+}
+@media only screen and (min-width: 1024px) {
+  .footer .footer {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: baseline;
+  }
+  .footer .footer .footer__part {
+    margin: 30px;
+  }
+  .footer .footer .footer__txt {
+    display: flex;
+    flex-direction: row;
+    color: white;
+  }
+}
+
+/***************restaurant*************/
+.restaurants {
+  display: flex;
+  flex-direction: column;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-top: 35px;
+  background-color: rgb(246, 246, 246);
+  margin-top: 40px;
+}
+.restaurants .restaurant__cards {
+  display: flex;
+  flex-direction: column;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  margin-bottom: 50px;
+}
+.restaurants .restaurant__cards .card {
+  width: 340px;
+  background-color: white;
+  border-radius: 15px;
+  padding-bottom: 10px;
+  position: relative;
+}
+.restaurants .restaurant__cards .card a {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.restaurants .restaurant__cards .card .card__image {
+  height: 200px;
+  width: 100%;
+  border-radius: 15px 15px 0 0;
+}
+.restaurants .restaurant__cards .card .card__news {
+  border-radius: 2px;
+  width: 80px;
+  height: 29px;
+  background-color: rgb(153, 226, 208);
+  color: rgb(0, 135, 102);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 15px; /* Ajustez la valeur selon votre préférence */
+  right: 15px; /* Ajustez la valeur selon votre préférence */
+}
+.restaurants .restaurant__cards .card .card__txt {
+  display: flex;
+  flex-direction: column;
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+}
+.restaurants .restaurant__cards .card .card__txt .card__text {
+  display: flex;
+  flex-direction: row; /* Assurez-vous que les éléments enfants sont alignés horizontalement */
+  justify-content: space-between; /* Place les éléments à l'extrémité de chaque ligne */
+  align-items: center; /* Aligne les éléments verticalement au centre */
+  padding-left: 5px;
+  /* Style de base de l'icône de cœur */
+  /* CSS pour cacher l'élément input */
+}
+.restaurants .restaurant__cards .card .card__txt .card__text :root {
+  --heart-fill-color: linear-gradient(
+    to left,
+    rgba(147, 86, 220, 1),
+    rgba(255, 121, 218, 1)
+  );
+}
+.restaurants .restaurant__cards .card .card__txt .card__text .heart-icon {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="var(--heart-fill-color)"><path d="M0 0h24v24H0z" fill="none"/><path d="M16.5 3c-1.74 0-3.41.81-4.5 2.09C10.91 3.81 9.24 3 7.5 3 4.42 3 2 5.42 2 8.5c0 3.78 3.4 6.86 8.55 11.54L12 21.35l1.45-1.32C18.6 15.36 22 12.28 22 8.5 22 5.42 19.58 3 16.5 3zm-4.4 15.55l-.1.1-.1-.1C7.14 14.24 4 11.39 4 8.5 4 6.5 5.5 5 7.5 5c1.54 0 3.04.99 3.57 2.36h1.87C13.46 5.99 14.96 5 16.5 5c2 0 3.5 1.5 3.5 3.5 0 2.89-3.14 5.74-7.9 10.05z"/></svg>');
+  background-size: cover;
+  cursor: pointer;
+}
+.restaurants .restaurant__cards .card .card__txt .card__text .visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden; /*masque tout contenu qui déborde des limites de son conteneur parent.*/
+  clip: rect(0, 0, 0, 0); /*masquer le contenu*/
+  border: 0;
+}
+.restaurants .restaurant__cards .card .card__txt .card__text input:checked + .heart-icon {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z" fill="rgba(147, 86, 220, 1)"/></svg>');
+}
+@media only screen and (min-width: 1024px) {
+  .restaurants .restaurant__cards {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+  .restaurants .restaurant__cards .card {
+    width: 490px;
+    height: 251px;
+  }
+  .restaurants .restaurant__cards .card .card__image {
+    height: 200px;
+  }
+  .restaurants .restaurant__cards .card .card__txt {
+    margin: initial;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+}
+
+.button-retour {
+  position: absolute; /* Position fixe pour rester en haut de la page */
+  top: 20px;
+  left: 20px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none; /* Suppression du soulignage du lien */
+}
+.button-retour .fa-arrow-lef {
+  width: 17px;
+  height: 16px;
+}
+
+.restaurant__image .palette {
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+  height: 275px;
+}
+
+.main-container {
+  position: relative;
+}
+.main-container .restaurant {
+  position: relative;
+  margin-top: -50px;
+  display: flex;
+  flex-direction: column;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  background-color: rgb(246, 246, 246);
+  border-radius: 40px 40px 0px 0px;
+  padding: 20px;
+  width: 100%;
+}
+@media only screen and (min-width: 1024px) {
+  .main-container .restaurant {
+    width: 80%;
+    margin-left: 10%;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .main-container .restaurant .restaurant__menu {
+    max-width: 625px;
+    margin-left: 240px;
+    margin-right: 200px;
+  }
+}
+.main-container .restaurant .restaurants__description {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  /* CSS pour cacher l'élément input */
+}
+@media only screen and (min-width: 1024px) {
+  .main-container .restaurant .restaurants__description {
+    justify-content: center;
+    gap: 25px;
+  }
+}
+.main-container .restaurant .restaurants__description .restaurants__description--title {
+  font-family: "shrikhand";
+  font-style: italic;
+  font-size: 28px;
+}
+.main-container .restaurant .restaurants__description .restaurants__description--icone {
+  display: flex;
+  flex-direction: column;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.main-container .restaurant .restaurants__description .heart-icon {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="var(--heart-fill-color)"><path d="M0 0h24v24H0z" fill="none"/><path d="M16.5 3c-1.74 0-3.41.81-4.5 2.09C10.91 3.81 9.24 3 7.5 3 4.42 3 2 5.42 2 8.5c0 3.78 3.4 6.86 8.55 11.54L12 21.35l1.45-1.32C18.6 15.36 22 12.28 22 8.5 22 5.42 19.58 3 16.5 3zm-4.4 15.55l-.1.1-.1-.1C7.14 14.24 4 11.39 4 8.5 4 6.5 5.5 5 7.5 5c1.54 0 3.04.99 3.57 2.36h1.87C13.46 5.99 14.96 5 16.5 5c2 0 3.5 1.5 3.5 3.5 0 2.89-3.14 5.74-7.9 10.05z"/></svg>');
+  background-size: cover;
+  cursor: pointer;
+}
+.main-container .restaurant .restaurants__description .visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden; /*masque tout contenu qui déborde des limites de son conteneur parent.*/
+  clip: rect(0, 0, 0, 0); /*masquer le contenu*/
+  border: 0;
+}
+.main-container .restaurant .restaurants__description input:checked + .heart-icon {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z" fill="rgba(147, 86, 220, 1)"/></svg>');
+}
+.main-container .restaurant .restaurant__menu .menu__entry,
+.main-container .restaurant .menu__flat,
+.main-container .restaurant .menu__dessert {
+  display: flex;
+  flex-direction: column;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.main-container .restaurant .restaurant__menu .menu__entry .menu__title,
+.main-container .restaurant .menu__flat .menu__title,
+.main-container .restaurant .menu__dessert .menu__title {
+  font-size: 16px;
+  color: rgb(0, 0, 0);
+  position: relative; /* Position relative pour faciliter le positionnement de la sous-ligne */
+}
+.main-container .restaurant .restaurant__menu .menu__entry .menu__title::before,
+.main-container .restaurant .menu__flat .menu__title::before,
+.main-container .restaurant .menu__dessert .menu__title::before {
+  content: ""; /* Ajoute un contenu vide */
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background-color: rgb(242, 242, 242);
+  width: 40px;
+  background-color: rgb(153, 226, 208);
+}
+.main-container .restaurant .restaurant__menu .menu__entry .menu__choice,
+.main-container .restaurant .menu__flat .menu__choice,
+.main-container .restaurant .menu__dessert .menu__choice {
+  animation-duration: 3s;
+  animation-delay: 0s;
+  animation-name: glissement;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px 0;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+}
+@keyframes glissement {
+  from {
+    margin-top: 100%;
+    height: 300%;
+  }
+  to {
+    margin-top: 0%;
+    height: 100%;
+  }
+}
+.main-container .restaurant .restaurant__menu .menu__entry .menu__choice .menu__choice--content,
+.main-container .restaurant .menu__flat .menu__choice .menu__choice--content,
+.main-container .restaurant .menu__dessert .menu__choice .menu__choice--content {
+  flex: 1;
+  margin: 10px;
+  width: 216px;
+}
+.main-container .restaurant .restaurant__menu .menu__entry .menu__choice .menu__choice--content .menu__choice--title,
+.main-container .restaurant .restaurant__menu .menu__entry .menu__choice .menu__choice--content .menu__choice--description,
+.main-container .restaurant .menu__flat .menu__choice .menu__choice--content .menu__choice--title,
+.main-container .restaurant .menu__flat .menu__choice .menu__choice--content .menu__choice--description,
+.main-container .restaurant .menu__dessert .menu__choice .menu__choice--content .menu__choice--title,
+.main-container .restaurant .menu__dessert .menu__choice .menu__choice--content .menu__choice--description {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.main-container .restaurant .restaurant__menu .menu__entry .menu__choice .price,
+.main-container .restaurant .menu__flat .menu__choice .price,
+.main-container .restaurant .menu__dessert .menu__choice .price {
+  font-weight: 700;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  margin: 10px;
+  cursor: pointer;
+}
+.main-container .restaurant .restaurant__menu .menu__entry .menu__choice .checkbox,
+.main-container .restaurant .menu__flat .menu__choice .checkbox,
+.main-container .restaurant .menu__dessert .menu__choice .checkbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 59px;
+  height: 69px;
+  background-color: rgb(153, 226, 208);
+  border-radius: 0 15px 15px 0;
+  transition-duration: 0.5s;
+  margin-right: -3.7rem;
+  cursor: pointer;
+}
+.main-container .restaurant .restaurant__menu .menu__entry .menu__choice .checkbox .fa-circle-check,
+.main-container .restaurant .menu__flat .menu__choice .checkbox .fa-circle-check,
+.main-container .restaurant .menu__dessert .menu__choice .checkbox .fa-circle-check {
+  color: white;
+}
+.main-container .restaurant .restaurant__menu .menu__entry .menu__choice:hover .checkbox,
+.main-container .restaurant .menu__flat .menu__choice:hover .checkbox,
+.main-container .restaurant .menu__dessert .menu__choice:hover .checkbox {
+  margin-right: 0;
+}
+.main-container .restaurant .order {
+  display: flex;
+  justify-content: center;
+  margin: 30px;
+}
+.main-container .restaurant .order .order__button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 186px;
+  height: 50px;
+  color: white;
+  background-image: linear-gradient(to left, rgb(147, 86, 220), rgb(255, 121, 218));
+  border-radius: 20px;
+  transition: background-color 0.5s;
+  font-size: 16px;
+}
+.main-container .restaurant .order .order__button:hover {
+  filter: brightness(1.1); /* Éclaircir le bouton */
+  transform: scale(1); /* agrandir légèrement le bouton pour un effet plus dynamique */
+}
+.main-container .footer {
+  position: absolute;
+  width: 100%;
+}
+
+/*# sourceMappingURL=style.css.map */
