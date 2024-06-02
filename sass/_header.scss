@@ -1,0 +1,25 @@
+.header {
+  @include flex-columun;
+  justify-content: center;
+  align-items: center;
+  gap: 35px;
+
+       .header {
+            @include flex-columun;
+            justify-content: center;
+            align-items: center;
+            gap:35px;
+        
+                .header__logo  {
+                    width:162px; /* la largeur */
+                    height: 44px;
+                    margin: 15px;
+                        }       
+        }
+    
+  .header__logo {
+    width: 162px; /* la largeur */
+    height: 44px;
+    margin: 15px;
+  }
+}

@@ -1,0 +1,214 @@
+.button-retour {
+  position: absolute; /* Position fixe pour rester en haut de la page */
+  top: 20px; 
+  left: 20px; 
+
+  padding: 10px 20px; 
+  border-radius: 5px; 
+  text-decoration: none; /* Suppression du soulignage du lien */
+
+  .fa-arrow-lef {
+    width: 17px;
+    height: 16px;
+  }
+}
+
+.restaurant__image {
+  .palette {
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    height: 275px;
+  }
+}
+
+.main-container {
+  position: relative;
+  .restaurant {
+    position: relative;
+    margin-top: -50px;
+    @include flex-columun;
+    gap: 40px;
+    background-color: rgba(246, 246, 246, 1);
+    border-radius: 40px 40px 0px 0px;
+    padding: 20px;
+    width: 100%;
+    @media only screen and (min-width: 1024px) {
+      width: 80%;
+      margin-left: 10%;
+    }
+
+    @media only screen and (min-width: 1024px) {
+      .restaurant__menu {
+        max-width: 625px;
+        margin-left: 240px;
+        margin-right: 200px;
+      }
+    }
+    .restaurants__description {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      @media only screen and (min-width: 1024px) {
+        justify-content: center;
+        gap: 25px;
+      }
+      .restaurants__description--title {
+        font-family: "shrikhand";
+        font-style: italic;
+        font-size: 28px;
+      }
+      .restaurants__description--icone {
+        @include flex-columun;
+        justify-content: center;
+      }
+
+      .heart-icon {
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+        background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="var(--heart-fill-color)"><path d="M0 0h24v24H0z" fill="none"/><path d="M16.5 3c-1.74 0-3.41.81-4.5 2.09C10.91 3.81 9.24 3 7.5 3 4.42 3 2 5.42 2 8.5c0 3.78 3.4 6.86 8.55 11.54L12 21.35l1.45-1.32C18.6 15.36 22 12.28 22 8.5 22 5.42 19.58 3 16.5 3zm-4.4 15.55l-.1.1-.1-.1C7.14 14.24 4 11.39 4 8.5 4 6.5 5.5 5 7.5 5c1.54 0 3.04.99 3.57 2.36h1.87C13.46 5.99 14.96 5 16.5 5c2 0 3.5 1.5 3.5 3.5 0 2.89-3.14 5.74-7.9 10.05z"/></svg>');
+        background-size: cover;
+        cursor: pointer;
+      }
+      /* CSS pour cacher l'élément input */
+      .visually-hidden {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        margin: -1px;
+        padding: 0;
+        overflow: hidden; /*masque tout contenu qui déborde des limites de son conteneur parent.*/
+        clip: rect(0, 0, 0, 0); /*masquer le contenu*/
+        border: 0;
+      }
+
+      input:checked + .heart-icon {
+        background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z" fill="rgba(147, 86, 220, 1)"/></svg>');
+      }
+    }
+    .restaurant__menu .menu__entry,
+    .menu__flat,
+    .menu__dessert {
+      @include flex-columun;
+      gap: 12px;
+
+      .menu__title {
+        font-size: 16px;
+        color: rgb(0, 0, 0, 1);
+        position: relative; /* Position relative pour faciliter le positionnement de la sous-ligne */
+      }
+
+      .menu__title::before {
+        content: ""; /* Ajoute un contenu vide */
+        position: absolute; 
+        bottom: -5px; 
+        left: 0; 
+        right: 0;
+        height: 3px; 
+        background-color: rgba(242, 242, 242, 1);
+        width: 40px;
+        background-color: rgba(153, 226, 208, 1);
+      }
+      // Animation d'affichage du menu
+      .menu__choice {
+        animation-duration: 3s;
+        animation-delay: 0s;
+        animation-name: glissement;
+        animation-iteration-count: 1; // S'assurer que l'animation ne se joue qu'une seule fois
+        animation-fill-mode: forwards; // Garder l'état final de l'animation
+        @keyframes glissement {
+          from {
+            margin-top: 100%;
+            height: 300%;
+          }
+
+          to {
+            margin-top: 0%;
+            height: 100%;
+          }
+        }
+
+        background-color: white;
+        border-radius: 15px;
+        box-shadow: 0 4px 15px 0;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        overflow: hidden;
+
+        .menu__choice--content {
+          flex: 1;
+          margin: 10px;
+          width: 216px;
+          //pour les texts longs 
+          .menu__choice--title,
+          .menu__choice--description {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+          }
+        }
+
+        .price {
+          font-weight: 700;
+          display: flex;
+          align-items: flex-end;
+          justify-content: flex-end;
+          margin: 10px;
+          cursor: pointer;
+        }
+        //animation du checkbox
+        .checkbox {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 59px;
+          height: 69px;
+          background-color: rgb(153, 226, 208);
+          border-radius: 0 15px 15px 0;
+          transition-duration: 0.5s;
+          margin-right: -3.7rem;
+          cursor: pointer;
+          .fa-circle-check {
+            color: white;
+          }
+        }
+        &:hover .checkbox {
+          margin-right: 0;
+        }
+      }
+    }
+
+    .order {
+      display: flex;
+      justify-content: center;
+      margin: 30px;
+      .order__button {
+        @include flex-center-row;
+        width: 186px;
+        height: 50px;
+        color: white;
+        background-image: linear-gradient(
+          to left,
+          rgb(147, 86, 220),
+          rgb(255, 121, 218)
+        );
+        border-radius: 20px;
+        transition: background-color 0.5s;
+        font-size: 16px;
+      }
+      .order__button:hover {
+        filter: brightness(1.1); /* Éclaircir le bouton */
+        transform: scale(
+          1
+        ); /* agrandir légèrement le bouton pour un effet plus dynamique */
+      }
+    }
+  }
+
+  .footer {
+    position: absolute;
+    width: 100%;
+  }
+}
