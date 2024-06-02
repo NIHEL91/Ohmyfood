@@ -17,13 +17,8 @@
         margin-left:16px;
         color:white;
         padding-bottom: 16px;
-  .footer__txt {
-    @include flex-columun;
-    gap: 5px;
-    margin-top: 10px;
-    margin-left: 16px;
-    color: white;
-    padding-bottom: 16px;
+  
+    
 
     .footer__txt--link {
       display: flex;
@@ -48,5 +43,4 @@
       color: white;
     }
   }
-}
 }

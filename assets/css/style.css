@@ -111,6 +111,11 @@ body .main-container .search__bar .search__bar--input {
   height: 50px;
   width: 100%;
 }
+@media only screen and (min-width: 1024px) {
+  body .main-container .search__bar .search__bar--input {
+    box-shadow: inset;
+  }
+}
 body .main-container .search__bar .search__bar--input .fa-location-dot {
   margin-right: 20px;
 }
@@ -278,39 +283,28 @@ body .main-container .functionality .functionality__links .fa-store {
   color: white;
   padding-bottom: 16px;
 }
-.footer .footer__txt .footer__txt {
-  display: flex;
-  flex-direction: column;
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-  margin-top: 10px;
-  margin-left: 16px;
-  color: white;
-  padding-bottom: 16px;
-}
-.footer .footer__txt .footer__txt .footer__txt--link {
+.footer .footer__txt .footer__txt--link {
   display: flex;
 }
-.footer .footer__txt .footer__txt .footer__txt--link .fa-solid {
+.footer .footer__txt .footer__txt--link .fa-solid {
   margin-right: 10px;
 }
+
 @media only screen and (min-width: 1024px) {
-  .footer .footer {
+  .footer {
     display: flex;
     flex-direction: row-reverse;
     align-items: baseline;
   }
-  .footer .footer .footer__part {
+  .footer .footer__part {
     margin: 30px;
   }
-  .footer .footer .footer__txt {
+  .footer .footer__txt {
     display: flex;
     flex-direction: row;
     color: white;
   }
 }
-
 /***************restaurant*************/
 .restaurants {
   display: flex;
