@@ -113,7 +113,7 @@ body .main-container .search__bar .search__bar--input {
 }
 @media only screen and (min-width: 1024px) {
   body .main-container .search__bar .search__bar--input {
-    box-shadow: inset;
+    box-shadow: none;
   }
 }
 body .main-container .search__bar .search__bar--input .fa-location-dot {

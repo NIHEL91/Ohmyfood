@@ -107,7 +107,7 @@ body {
       height: 50px;
       width: 100%;
       @media only screen and (min-width: 1024px) {
-          box-shadow: inset;
+          box-shadow:none;
       }
       .fa-location-dot {
         margin-right: 20px;
